@@ -1,0 +1,405 @@
+/* ----------RESET START---------- */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  outline: none;
+  text-decoration: none;
+  font-family: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button,
+a {
+  cursor: pointer;
+  color: inherit;
+}
+
+a img {
+  border: none;
+}
+
+img, svg {
+  display: block;
+}
+
+textarea {
+  resize: none;
+}
+
+button,
+input,
+textarea,
+select {
+  -webkit-appearance: none !important;
+     -moz-appearance: none !important;
+          appearance: none !important;
+  border-radius: 0;
+}
+
+/* ----------RESET END---------- */
+body {
+  background-color: #95bddc;
+  min-height: 500px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.1em;
+  color: #fff;
+  cursor: url("cursor.png"), default;
+}
+
+body video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  opacity: 0.85;
+}
+
+body #root {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+body #root #leftSide {
+  position: relative;
+  width: calc(100% - 400px);
+  min-height: 100vh;
+}
+
+body #root #leftSide h1 {
+  position: fixed;
+  left: 70px;
+  top: 20%;
+  font-size: 32pt;
+  text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.72);
+}
+
+body #root #leftSide #headerLocation {
+  position: fixed;
+  top: 35%;
+  left: 70px;
+  font-size: 48pt;
+  font-family: 'Satisfy', cursive;
+  text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.72);
+}
+
+body #root #leftSide #currentWeatherData {
+  width: 500px;
+  height: 120px;
+  position: fixed;
+  right: 470px;
+  bottom: 100px;
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+  -ms-grid-rows: 60% 40%;
+      grid-template-rows: 60% 40%;
+  background-color: rgba(148, 188, 219, 0.7);
+  border-radius: 20px 40px;
+}
+
+body #root #leftSide #currentWeatherData #temperature {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 3;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding: 10px;
+  font-size: 44pt;
+}
+
+body #root #leftSide #currentWeatherData .location {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  padding: 10px 10px 5px 10px;
+  font-size: 18pt;
+}
+
+body #root #leftSide #currentWeatherData #date {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  padding: 0px 10px 10px 10px;
+  font-size: 14pt;
+  font-weight: 300;
+}
+
+body #root #rightSide {
+  position: relative;
+  width: 400px;
+  min-height: 100vh;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #95bddc;
+}
+
+body #root #rightSide #inputField {
+  width: calc(100% - 40px);
+  height: 25px;
+  margin-top: 60px;
+  margin-left: 20px;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+body #root #rightSide #inputField::-webkit-input-placeholder {
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: white;
+}
+
+body #root #rightSide #inputField:-ms-input-placeholder {
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: white;
+}
+
+body #root #rightSide #inputField::-ms-input-placeholder {
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: white;
+}
+
+body #root #rightSide #inputField::placeholder {
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: white;
+}
+
+body #root #rightSide #searchIconHolder {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45px;
+  height: 45px;
+  background-color: white;
+}
+
+body #root #rightSide #searchIconHolder #searchIcon {
+  fill: #95bddc;
+  width: 17px;
+  height: 18px;
+}
+
+body #root #rightSide #selectorContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: calc(100% - 40px);
+  height: 50px;
+  margin: 20px;
+  border-bottom: 1px solid white;
+}
+
+body #root #rightSide #selectorContainer #citySelector {
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: white;
+}
+
+body #root #rightSide #selectorContainer select {
+  padding: 12px;
+  width: 400px;
+  background-color: #79afd8;
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  outline: none;
+}
+
+body #root #rightSide #selectorContainer span {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 100%;
+  pointer-events: none;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+body #root #rightSide #selectorContainer span img {
+  width: 17px;
+  margin: auto;
+}
+
+body #root #rightSide #selectorContainer:hover span {
+  background-color: #618aaa;
+}
+
+body #root #rightSide #detailsContainer {
+  margin: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+  width: calc(100% - 40px);
+  border-bottom: 1px solid white;
+}
+
+body #root #rightSide #detailsContainer h2 {
+  -ms-grid-column: span 2;
+      grid-column-start: span 2;
+  padding: 10px 0;
+}
+
+body #root #rightSide #detailsContainer div {
+  width: 100%;
+  padding: 10px 0;
+}
+
+body #root #rightSide #detailsContainer div:nth-of-type(2n) {
+  text-align: right;
+  font-weight: 600;
+}
+
+body #root #rightSide #needUmbrella {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #root #rightSide #needUmbrella #question {
+  text-transform: uppercase;
+}
+
+body #root #rightSide #needUmbrella img {
+  width: 70px;
+  padding: 10px;
+}
+
+#spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 6;
+}
+
+#spinner img {
+  width: 250px;
+}
+
+#loadingText {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  -webkit-transform: translate(-50%, -80%);
+          transform: translate(-50%, -80%);
+  z-index: 6;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  font-size: 20px;
+  text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.72);
+}
+
+@media (max-width: 1000px) {
+  body #root {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  body #root #leftSide {
+    width: 100%;
+  }
+  body #root #leftSide h1, body #root #leftSide #headerLocation {
+    position: absolute;
+    width: 100%;
+  }
+  body #root #leftSide #currentWeatherData {
+    position: absolute;
+    right: 50%;
+    bottom: 100px;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+  body #root #rightSide {
+    width: 100%;
+  }
+  body #root #rightSide #inputField {
+    width: calc(100% - 100px);
+    margin-left: 50px;
+  }
+  body #root #rightSide #searchIconHolder {
+    right: 50px;
+  }
+  body #root #rightSide #selectorContainer, body #root #rightSide #detailsContainer {
+    width: calc(100% - 100px);
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  body #root #rightSide #selectorContainer select, body #root #rightSide #detailsContainer select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  body #root #leftSide h1 {
+    font-size: 25px;
+  }
+  body #root #leftSide #headerLocation {
+    font-size: 35px;
+  }
+  body #root #leftSide #currentWeatherData {
+    width: 400px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
