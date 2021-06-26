@@ -66,8 +66,8 @@ function fetching(url) {
 
 			const takeUmbText = "It's raining man! Hallelujah!";
 			const leaveUmbText = "Here comes the sun do, do, do...";
-			const takeUmbSrc = "icons/rain.png";
-			const leaveUmbSrc = "icons/sun.png";
+			const takeUmbSrc = "rain.png";
+			const leaveUmbSrc = "sun.png";
 
 			let imgE = document.querySelector("#needUmbrella img");
 			let pAnswer = document.getElementById("answer");
@@ -172,7 +172,7 @@ document.addEventListener("readystatechange", spinnerFunction)
 const spinnerCont = document.getElementById("spinner");
 const gifImg = document.createElement("img");
 
-gifImg.setAttribute("src", "icons/cute_sun.gif");
+gifImg.setAttribute("src", "cute_sun.gif");
 spinnerCont.appendChild(gifImg).classList.add("gif");
 
 function loadEvent() {
@@ -207,7 +207,7 @@ function loadEvent() {
 
 			<div id="selectorContainer">
 				<span id="imgCont">
-					<img src="icons/arrow.png" alt="">
+					<img src="/arrow.png" alt="">
 				</span>
 				<select id="citySelector">
 					<option selected disabled> Our favourite cities </option>
