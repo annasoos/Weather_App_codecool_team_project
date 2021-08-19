@@ -66,8 +66,8 @@ function fetching(url) {
 
 			const takeUmbText = "It's raining man! Hallelujah!";
 			const leaveUmbText = "Here comes the sun do, do, do...";
-			const takeUmbSrc = "rain.png";
-			const leaveUmbSrc = "sun.png";
+			const takeUmbSrc = "media/rain.png";
+			const leaveUmbSrc = "media/sun.png";
 
 			let imgE = document.querySelector("#needUmbrella img");
 			let pAnswer = document.getElementById("answer");
@@ -106,35 +106,29 @@ function apiUpdate() {
 	fetching();
 };
 
-// AUTOCOMPLETE FUNCTION -- SOURCE: https://www.youtube.com/watch?v=1iysNUrI3lw
+// AUTOCOMPLETE FUNCTION
 
 async function searchComplete() {
 
-	let inputFieldElement = document.getElementById("inputField");  //megfogom az input mezőt
-	let newURL = apiSearch + "&q=" + inputFieldElement.value; // frissítem a search API url-t
+	let inputFieldElement = document.getElementById("inputField");
+	let newURL = apiSearch + "&q=" + inputFieldElement.value; 
 
-	console.log(newURL);
+	const response = await fetch(newURL);  
+	const foundCities = await response.json(); 
 
-	const response = await fetch(newURL);  // fetchelem az új URL-t
-	const foundCities = await response.json(); // elmentem egy változóba a választ
-
-	console.log(foundCities);
-
-	let regex = new RegExp(`^${inputFieldElement.value}`, "gi"); // azt szeretném, hogy a megtalált objectek közül csak azt adja vissza, amelyik a begépelt karakterekkel kezdődik, ezért létrehozok egy regular expressiont(^ karakter jelzi, hogy a találatok elején keressen. A gi modifier lehetővé teszi, hogy kis és nagybetűs találatokat is visszakapjunk, ne tegyen különbséget).
+	let regex = new RegExp(`^${inputFieldElement.value}`, "gi");
 
 	let matches = foundCities.filter(function (cityElement) {
 		return cityElement.name.match(regex)
-	});  // kimentem csak azokat a városokat, amelyeknek a neve egyezik a regex-el
+	}); 
 
-	console.log(matches);
-
-	outputHTML(matches); //ráhívom az outputHTML függvényt
+	outputHTML(matches); 
 
 };
 
 // SHOW RESULTS AS INPUT DROPDOWN
 
-function outputHTML(matchesArray) {  // végig iterálok a találatokon, és minden elem esetén beszúrok egy optiont az input mező alatt megjelenő dropdown-ba
+function outputHTML(matchesArray) {  
 
 	let cityBrowserElement = document.getElementById("cityBrowser");
 
@@ -172,7 +166,7 @@ document.addEventListener("readystatechange", spinnerFunction)
 const spinnerCont = document.getElementById("spinner");
 const gifImg = document.createElement("img");
 
-gifImg.setAttribute("src", "cute_sun.gif");
+gifImg.setAttribute("src", "media/cute_sun.gif");
 spinnerCont.appendChild(gifImg).classList.add("gif");
 
 function loadEvent() {
@@ -207,7 +201,7 @@ function loadEvent() {
 
 			<div id="selectorContainer">
 				<span id="imgCont">
-					<img src="/arrow.png" alt="">
+					<img src="/media/arrow.png" alt="arrow">
 				</span>
 				<select id="citySelector">
 					<option selected disabled> Our favourite cities </option>
