@@ -50,13 +50,13 @@ function fetching(url) {
 			let snowWeather = ["Patchy snow possible", "Blowing snow", "Blizzard", "Patchy light snow", "Light snow", "Patchy moderate snow", "Moderate snow", "Patchy heavy snow", "Heavy snow", "Ice pellets", "Light snow showers", "Moderate or heavy snow showers", "Light showers of ice pellets", "Moderate or heavy showers of ice pellets", "Patchy light snow with thunder", "Moderate or heavy snow with thunder"];
 
 			if (sunnyWeather.includes(skyValue)) {
-				video.src = "sky_conditions/sunny_video.mp4"
+				video.src = "media/sky_conditions/sunny_video.mp4"
 			} else if (cloudyWeather.includes(skyValue)) {
-				video.src = "sky_conditions/cloudy_video.mp4"
+				video.src = "media/sky_conditions/cloudy_video.mp4"
 			} else if (rainyWeather.includes(skyValue)) {
-				video.src = "sky_conditions/rainy_video.mp4"
+				video.src = "media/sky_conditions/rainy_video.mp4"
 			} else if (snowWeather.includes(skyValue)) {
-				video.src = "sky_conditions/snow_video.mp4"
+				video.src = "media/sky_conditions/snow_video.mp4"
 			}
 
 			//UMBRELLA VARIABLES & EVENT

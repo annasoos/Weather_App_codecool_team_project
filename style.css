@@ -86,19 +86,17 @@ body #root #leftSide {
 }
 
 body #root #leftSide h1 {
-  left: 60%;
+  position: fixed;
+  left: 10%;
   top: 20%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   font-size: 32pt;
   text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.72);
 }
 
 body #root #leftSide #headerLocation {
-  left: 60%;
+  position: fixed;
+  left: 15%;
   top: 35%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   font-size: 48pt;
   font-family: 'Satisfy', cursive;
   text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.72);
