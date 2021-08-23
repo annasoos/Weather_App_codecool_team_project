@@ -1,6 +1,6 @@
 # Weather App
 
-Web based Weather application with using https://www.weatherapi.com/ API.
+Web based Weather application using https://www.weatherapi.com/ API.
 
 ## Weather by city
 
@@ -21,4 +21,4 @@ Contains a simple input field with autocomplete feature.
 - Responsivity and positioning adjustments
 - Additional development: weekly forecast
 
-
+![weatherapp](https://user-images.githubusercontent.com/83576776/130461615-cfcc1f1f-56f9-46ff-b8b7-6c28b84b90e9.png)
