@@ -12,12 +12,13 @@ Contains a simple input field with autocomplete feature.
 
 ## Extra improvements
 
-The page is showing spinner while the content is loading.
-Each weather condition has an assigned background video.
+- The page is showing spinner while the content is loading.
+- Each weather condition has an assigned background video.
+- Custom cursor
 
 ## TODO
 
-- Responsivity adjustments (mobile version)
+- Responsivity and positioning adjustments
 - Additional development: weekly forecast
 
 
