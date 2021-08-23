@@ -58,7 +58,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.1em;
   color: #fff;
-  cursor: url("cursor.png"), default;
+  cursor: url("/media/cursor.png"), default;
 }
 
 body video {
@@ -81,22 +81,24 @@ body #root {
 
 body #root #leftSide {
   position: relative;
-  width: calc(100% - 400px);
+  width: 100%;
   min-height: 100vh;
 }
 
 body #root #leftSide h1 {
-  position: fixed;
-  left: 70px;
+  left: 60%;
   top: 20%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   font-size: 32pt;
   text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.72);
 }
 
 body #root #leftSide #headerLocation {
-  position: fixed;
+  left: 60%;
   top: 35%;
-  left: 70px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   font-size: 48pt;
   font-family: 'Satisfy', cursive;
   text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.72);
@@ -399,7 +401,13 @@ body #root #rightSide #needUmbrella img {
     font-size: 35px;
   }
   body #root #leftSide #currentWeatherData {
-    width: 400px;
+    width: 360px;
+  }
+  body #root #leftSide #currentWeatherData #temperature {
+    font-size: 38pt;
+  }
+  body #root #leftSide #currentWeatherData .location {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=style.css.map */

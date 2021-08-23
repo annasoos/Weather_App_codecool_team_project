@@ -15,4 +15,9 @@ Contains a simple input field with autocomplete feature.
 The page is showing spinner while the content is loading.
 Each weather condition has an assigned background video.
 
+## TODO
+
+- Responsivity adjustments (mobile version)
+- Additional development: weekly forecast
+
 

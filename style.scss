@@ -57,7 +57,7 @@ body {
   letter-spacing: 0.1em;
   color: #fff;
 
-  cursor: url("cursor.png"), default;
+  cursor: url("/media/cursor.png"), default;
 
   video {
     position: fixed;
@@ -77,24 +77,22 @@ body {
   
     #leftSide{
       position: relative;
-      width: calc(100% - 400px);
+      width: 100%;
       min-height: 100vh;
 
       h1 {
-        position: fixed;
-        left: 70px;
-        //left: calc((100% - 400px ) / 2);
+        left: 60%;
         top: 20%;
-        //transform: translateX(-50%);
+        transform: translateX(-50%);
 
         font-size: 32pt;
         text-shadow: 2px 2px 9px rgba(0,0,0,0.72);
       }
 
       #headerLocation {
-        position: fixed;
+        left: 60%;
         top: 35%;
-        left: 70px;
+        transform: translateX(-50%);
         
         font-size: 48pt;
         font-family: 'Satisfy', cursive;
@@ -193,6 +191,7 @@ body {
       #selectorContainer {
         display: flex;
         position: relative;
+
         width: calc(100% - 40px);
         height: 50px;
         margin: 20px;
@@ -202,7 +201,6 @@ body {
         #citySelector {
           font-size: 1rem;
           letter-spacing: 0.1em;
-
           color: white;
         }
 
@@ -368,7 +366,15 @@ body {
         }
 
         #currentWeatherData {
-          width: 400px;
+          width: 360px;
+
+          #temperature{
+            font-size: 38pt;
+          }
+
+          .location {
+            font-size: 16px;
+          }
         }
       }
     }
