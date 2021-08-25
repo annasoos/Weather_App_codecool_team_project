@@ -33,7 +33,8 @@ a img {
   border: none;
 }
 
-img, svg {
+img,
+svg {
   display: block;
 }
 
@@ -55,7 +56,7 @@ select {
 body {
   background-color: #95bddc;
   min-height: 500px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   letter-spacing: 0.1em;
   color: #fff;
   cursor: url("/media/cursor.png"), default;
@@ -98,7 +99,7 @@ body #root #leftSide #headerLocation {
   left: 15%;
   top: 35%;
   font-size: 48pt;
-  font-family: 'Satisfy', cursive;
+  font-family: "Satisfy", cursive;
   text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.72);
 }
 
@@ -360,7 +361,8 @@ body #root #rightSide #needUmbrella img {
   body #root #leftSide {
     width: 100%;
   }
-  body #root #leftSide h1, body #root #leftSide #headerLocation {
+  body #root #leftSide h1,
+  body #root #leftSide #headerLocation {
     position: absolute;
     width: 100%;
   }
@@ -381,12 +383,14 @@ body #root #rightSide #needUmbrella img {
   body #root #rightSide #searchIconHolder {
     right: 50px;
   }
-  body #root #rightSide #selectorContainer, body #root #rightSide #detailsContainer {
+  body #root #rightSide #selectorContainer,
+  body #root #rightSide #detailsContainer {
     width: calc(100% - 100px);
     margin-left: 50px;
     margin-right: 50px;
   }
-  body #root #rightSide #selectorContainer select, body #root #rightSide #detailsContainer select {
+  body #root #rightSide #selectorContainer select,
+  body #root #rightSide #detailsContainer select {
     width: 100%;
   }
 }

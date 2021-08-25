@@ -30,8 +30,9 @@ a img {
   border: none;
 }
 
-img, svg {
-  display:block;
+img,
+svg {
+  display: block;
 }
 
 textarea {
@@ -48,12 +49,11 @@ select {
 
 /* ----------RESET END---------- */
 
-
 body {
   background-color: #95bddc;
   min-height: 500px;
 
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   letter-spacing: 0.1em;
   color: #fff;
 
@@ -74,8 +74,8 @@ body {
     width: 100vw;
     height: 100vh;
     display: none;
-  
-    #leftSide{
+
+    #leftSide {
       position: relative;
       width: 100%;
       min-height: 100vh;
@@ -86,20 +86,20 @@ body {
         top: 20%;
 
         font-size: 32pt;
-        text-shadow: 2px 2px 9px rgba(0,0,0,0.72);
+        text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.72);
       }
 
       #headerLocation {
         position: fixed;
         left: 15%;
         top: 35%;
-        
+
         font-size: 48pt;
-        font-family: 'Satisfy', cursive;
-        text-shadow: 2px 2px 9px rgba(0,0,0,0.72);
+        font-family: "Satisfy", cursive;
+        text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.72);
       }
 
-      #currentWeatherData{
+      #currentWeatherData {
         width: 500px;
         height: 120px;
 
@@ -115,7 +115,7 @@ body {
         background-color: rgba(148, 188, 219, 0.7);
         border-radius: 20px 40px;
 
-        #temperature{
+        #temperature {
           grid-column-start: 1;
           grid-column-end: 2;
           grid-row-start: 1;
@@ -129,13 +129,13 @@ body {
           font-size: 44pt;
         }
 
-        .location{
+        .location {
           align-self: end;
           padding: 10px 10px 5px 10px;
           font-size: 18pt;
         }
 
-        #date{
+        #date {
           align-self: start;
           padding: 0px 10px 10px 10px;
           font-size: 14pt;
@@ -143,8 +143,8 @@ body {
         }
       }
     }
-  
-    #rightSide{
+
+    #rightSide {
       position: relative;
       width: 400px;
       min-height: 100vh;
@@ -162,7 +162,7 @@ body {
         border-bottom: 1px solid white;
       }
 
-      #inputField::placeholder{
+      #inputField::placeholder {
         font-size: 1rem;
         letter-spacing: 0.1em;
         color: white;
@@ -180,7 +180,7 @@ body {
         width: 45px;
         height: 45px;
         background-color: white;
-        
+
         #searchIcon {
           fill: #95bddc;
           width: 17px;
@@ -256,7 +256,7 @@ body {
         }
       }
 
-      #needUmbrella{
+      #needUmbrella {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -269,17 +269,16 @@ body {
           text-transform: uppercase;
         }
 
-        img{
+        img {
           width: 70px;
           padding: 10px;
         }
-
       }
     }
   }
 }
 
-#spinner{
+#spinner {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -291,7 +290,7 @@ body {
   }
 }
 
-#loadingText{
+#loadingText {
   position: absolute;
   left: 50%;
   top: 80%;
@@ -301,7 +300,7 @@ body {
   height: 100px;
   text-align: center;
   font-size: 20px;
-  text-shadow: 2px 2px 9px rgba(0,0,0,0.72);
+  text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.72);
 }
 
 @media (max-width: 1000px) {
@@ -313,7 +312,8 @@ body {
       #leftSide {
         width: 100%;
 
-        h1, #headerLocation {
+        h1,
+        #headerLocation {
           position: absolute;
           width: 100%;
         }
@@ -338,13 +338,14 @@ body {
           right: 50px;
         }
 
-        #selectorContainer, #detailsContainer {
+        #selectorContainer,
+        #detailsContainer {
           width: calc(100% - 100px);
           margin-left: 50px;
           margin-right: 50px;
 
           select {
-          width: 100%;
+            width: 100%;
           }
         }
       }
@@ -356,11 +357,10 @@ body {
   body {
     #root {
       #leftSide {
-
         h1 {
           font-size: 25px;
         }
-      
+
         #headerLocation {
           font-size: 35px;
         }
@@ -368,7 +368,7 @@ body {
         #currentWeatherData {
           width: 360px;
 
-          #temperature{
+          #temperature {
             font-size: 38pt;
           }
 

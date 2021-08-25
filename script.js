@@ -73,26 +73,22 @@ function fetching(url) {
 			let pAnswer = document.getElementById("answer");
 
 			for (let value of leaveUmb) {
-				console.log(skyValue === value);
-
-				if (skyValue === value)  {
+				if (skyValue === value) {
 					imgE.setAttribute("src", leaveUmbSrc);
-					console.log(leaveUmbSrc);
-
 					pAnswer.innerHTML = leaveUmbText;
-					console.log(leaveUmbText);
 				};
 			};
+
 			for (let value of takeUmb) {
 				if (skyValue === value) {
 					imgE.setAttribute("src", takeUmbSrc);
 					pAnswer.innerHTML = takeUmbText;
 				};
 			};
+
 		})
 		.catch(function (error) {
-			console.log("ERROR");
-			console.log(error)
+			console.log("Error: ", error);
 		})
 };
 
@@ -111,18 +107,23 @@ function apiUpdate() {
 async function searchComplete() {
 
 	let inputFieldElement = document.getElementById("inputField");
-	let newURL = apiSearch + "&q=" + inputFieldElement.value; 
 
-	const response = await fetch(newURL);  
-	const foundCities = await response.json(); 
+	if (inputFieldElement.value.length >= 3) {
+		let newURL = apiSearch + "&q=" + inputFieldElement.value;
 
-	let regex = new RegExp(`^${inputFieldElement.value}`, "gi");
+		const response = await fetch(newURL);
+		const foundCities = await response.json();
 
-	let matches = foundCities.filter(function (cityElement) {
-		return cityElement.name.match(regex)
-	}); 
+		let regex = new RegExp(`^${inputFieldElement.value}`, "gi");
 
-	outputHTML(matches); 
+		let matches = foundCities.filter(function (cityElement) {
+			return cityElement.name.match(regex)
+		});
+
+		console.log(matches)
+
+		outputHTML(matches);
+	}
 
 };
 
@@ -254,7 +255,6 @@ function loadEvent() {
 		}
 
 	});
-
 
 };
 
