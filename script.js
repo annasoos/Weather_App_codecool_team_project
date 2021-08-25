@@ -133,11 +133,11 @@ function outputHTML(matchesArray) {
 
 	let cityBrowserElement = document.getElementById("cityBrowser");
 
+	while (cityBrowserElement.firstChild) {
+		cityBrowserElement.removeChild(cityBrowserElement.lastChild);
+	};
+	
 	for (i = 0; i < matchesArray.length; i++) {
-
-		while (cityBrowserElement.firstChild) {
-			cityBrowserElement.removeChild(cityBrowserElement.lastChild);
-		};
 
 		cityBrowserElement.insertAdjacentHTML("beforeend", `
 		<option class="autoOption"> ${matchesArray[i].name} </option>
