@@ -1,8 +1,8 @@
 // API DECLARATION
 
-let apiOrigin = "https://api.weatherapi.com/v1/current.json?key=66ebd626d6a44e61a8382121212106";
-let apiURL = "https://api.weatherapi.com/v1/current.json?key=66ebd626d6a44e61a8382121212106&q=Budapest";
-let apiSearch = "https://api.weatherapi.com/v1/search.json?key=66ebd626d6a44e61a8382121212106"
+let apiOrigin = "https://api.weatherapi.com/v1/current.json?key=e2d6ed729da34234ba7105923213008";
+let apiURL = "https://api.weatherapi.com/v1/current.json?key=e2d6ed729da34234ba7105923213008&q=Budapest";
+let apiSearch = "https://api.weatherapi.com/v1/search.json?key=e2d6ed729da34234ba7105923213008"
 
 // FETCHING FUNCTION
 
